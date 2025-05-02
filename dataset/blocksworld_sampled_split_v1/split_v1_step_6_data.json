@@ -1,0 +1,102 @@
+[
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-300.pddl",
+    "(unstack b d)\n(put-down b)\n(pick-up d)\n(stack d b)\n(unstack c a)\n(stack c d)\n",
+    6
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-394.pddl",
+    "(unstack c b)\n(put-down c)\n(pick-up b)\n(stack b a)\n(pick-up d)\n(stack d b)\n",
+    6
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-35.pddl",
+    "(unstack c a)\n(put-down c)\n(unstack a d)\n(put-down a)\n(unstack d b)\n(stack d c)\n",
+    6
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-206.pddl",
+    "(pick-up a)\n(stack a d)\n(unstack b c)\n(stack b a)\n(pick-up c)\n(stack c b)\n",
+    6
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic_3/instance-26.pddl",
+    "(unstack b a)\n(put-down b)\n(unstack a c)\n(put-down a)\n(pick-up c)\n(stack c b)\n",
+    6
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-336.pddl",
+    "(unstack a d)\n(stack a b)\n(pick-up c)\n(stack c d)\n(unstack a b)\n(stack a c)\n",
+    6
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-42.pddl",
+    "(unstack b a)\n(stack b c)\n(pick-up a)\n(stack a b)\n(pick-up d)\n(stack d a)\n",
+    6
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-159.pddl",
+    "(unstack b d)\n(put-down b)\n(pick-up d)\n(stack d b)\n(pick-up a)\n(stack a d)\n",
+    6
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic_3/instance-64.pddl",
+    "(unstack a c)\n(put-down a)\n(pick-up c)\n(stack c a)\n(pick-up b)\n(stack b c)\n",
+    6
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-470.pddl",
+    "(unstack b d)\n(put-down b)\n(unstack d e)\n(stack d c)\n(pick-up b)\n(stack b d)\n",
+    6
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-306.pddl",
+    "(unstack b c)\n(put-down b)\n(pick-up a)\n(stack a c)\n(pick-up d)\n(stack d a)\n",
+    6
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-58.pddl",
+    "(unstack a b)\n(put-down a)\n(unstack b d)\n(put-down b)\n(unstack d c)\n(stack d a)\n",
+    6
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-317.pddl",
+    "(unstack b a)\n(put-down b)\n(pick-up a)\n(stack a d)\n(pick-up b)\n(stack b a)\n",
+    6
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-461.pddl",
+    "(unstack e d)\n(put-down e)\n(unstack d b)\n(stack d e)\n(pick-up b)\n(stack b a)\n",
+    6
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-395.pddl",
+    "(unstack a d)\n(stack a c)\n(unstack d b)\n(stack d a)\n(pick-up b)\n(stack b d)\n",
+    6
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-500.pddl",
+    "(unstack d b)\n(stack d a)\n(unstack b c)\n(put-down b)\n(pick-up c)\n(stack c b)\n",
+    6
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic_3/instance-62.pddl",
+    "(unstack a b)\n(put-down a)\n(pick-up b)\n(stack b c)\n(pick-up a)\n(stack a b)\n",
+    6
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-186.pddl",
+    "(unstack b c)\n(put-down b)\n(unstack c d)\n(put-down c)\n(unstack d a)\n(stack d b)\n",
+    6
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic_3/instance-38.pddl",
+    "(unstack c a)\n(put-down c)\n(unstack a b)\n(put-down a)\n(pick-up b)\n(stack b a)\n",
+    6
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-259.pddl",
+    "(unstack b c)\n(put-down b)\n(pick-up a)\n(stack a b)\n(pick-up d)\n(stack d c)\n",
+    6
+  ]
+]

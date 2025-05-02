@@ -1,0 +1,102 @@
+[
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-233.pddl",
+    "(pick-up c)\n(stack c d)\n",
+    2
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-223.pddl",
+    "(pick-up a)\n(stack a d)\n",
+    2
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic_3/instance-92.pddl",
+    "(unstack b c)\n(stack b a)\n",
+    2
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic_3/instance-89.pddl",
+    "(pick-up b)\n(stack b a)\n",
+    2
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-124.pddl",
+    "(pick-up c)\n(stack c a)\n",
+    2
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-5.pddl",
+    "(pick-up d)\n(stack d c)\n",
+    2
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-71.pddl",
+    "(pick-up d)\n(stack d a)\n",
+    2
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-396.pddl",
+    "(unstack c d)\n(stack c b)\n",
+    2
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-41.pddl",
+    "(unstack b c)\n(stack b d)\n",
+    2
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-426.pddl",
+    "(unstack c b)\n(stack c a)\n",
+    2
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-21.pddl",
+    "(pick-up b)\n(stack b d)\n",
+    2
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic_3/instance-93.pddl",
+    "(pick-up c)\n(stack c a)\n",
+    2
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-170.pddl",
+    "(pick-up d)\n(stack d b)\n",
+    2
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic_3/instance-86.pddl",
+    "(pick-up c)\n(stack c b)\n",
+    2
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-192.pddl",
+    "(unstack d c)\n(stack d a)\n",
+    2
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-164.pddl",
+    "(pick-up c)\n(stack c a)\n",
+    2
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic_3/instance-20.pddl",
+    "(pick-up b)\n(stack b a)\n",
+    2
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic_3/instance-96.pddl",
+    "(unstack b a)\n(stack b c)\n",
+    2
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-430.pddl",
+    "(unstack c d)\n(stack c a)\n",
+    2
+  ],
+  [
+    "LLMs-Planning/llm_planning_analysis/instances/blocksworld/generated_basic/instance-495.pddl",
+    "(pick-up a)\n(stack a b)\n",
+    2
+  ]
+]

@@ -1,0 +1,68 @@
+I am playing with a set of blocks where I need to arrange the blocks into stacks. Here are the actions I can do
+
+Pick up a block
+Unstack a block from on top of another block
+Put down a block
+Stack a block on top of another block
+
+I have the following restrictions on my actions:
+
+I can only pick up or unstack one block at a time.
+I can only pick up or unstack a block if my hand is empty.
+I can only pick up a block if the block is on the table and the block is clear. A block is clear if the block has no other blocks on top of it and if the block is not picked up.
+I can only unstack a block from on top of another block if the block I am unstacking was really on top of the other block.
+I can only unstack a block from on top of another block if the block I am unstacking is clear.
+Once I pick up or unstack a block, I am holding the block.
+I can only put down a block that I am holding.
+I can only stack a block on top of another block if I am holding the block being stacked.
+I can only stack a block on top of another block if the block onto which I am stacking the block is clear.
+Once I put down or stack a block, my hand becomes empty.
+
+
+Now I need to correct previous invalid actions. Use the following FORMAT.
+
+
+
+### Example Input 1:
+"Goal": "The blue block is on the orange block"
+"Initial state": "The orange block is clear, the red block is clear, the hand is empty, the orange block is on the blue block, the blue block is on the table, the red block is on the table"
+"Action 1": "Unstack the orange block from the blue block"
+"State 1": "The blue block is clear, the red block is clear, the hand is holding the orange block, the blue block is on the table, the red block is on the table"
+"Previous invalid actions": {"Action 2": "Pick up the red block"}
+
+### Example Output 1:
+"Action 2": "Put down the orange block"
+
+
+
+### Example Input 2:
+"Goal": "The blue block is on top of the red block and the yellow block is on top of the orange block"
+"Initial state": "The orange block is clear, the yellow block is clear, the hand is empty, the blue block is on top of the red block, the orange block is on top of the blue block, the red block is on the table and the yellow block is on the table"
+"Previous invalid actions": {"Action 1": "Unstack the blue block from the red block", "Action 1": "Pick up the blue block", "Action 1": "Pick up the red block"}
+
+### Example Output 2:
+"Action 1": "Pick up the yellow block"
+
+
+
+### Example Input 3:
+"Goal": "The blue block is on top of the orange block"
+"Initial state": "The red block is clear, the yellow block is clear, the hand is empty, the red block is on top of the blue block, the yellow block is on top of the orange block, the blue block is on the table and the orange block is on the table"
+"Previous invalid actions": {"Action 1": "Unstack the blue block from the red block", "Action 1": "Pick up the blue block", "Action 1": "Put down the yellow block"}
+
+### Example Output 3:
+"Action 1": "Unstack the yellow block from the orange block"
+
+
+
+### Example Input 4:
+"Goal": "The red block is on top of the orange block"
+"Initial state": "The orange block is clear, the yellow block is clear, the hand is empty, the blue block is on top of the red block, the orange block is on top of the blue block, the red block is on the table and the yellow block is on the table"
+"Action 1": "Unstack the orange block from the blue block"
+"State 1": "the yellow block is clear, the blue block is clear, the hand is holding the orange block, the blue block is on top of the red block, the red block is on the table and the yellow block is on the table"
+"Action 2": "Put down the orange block"
+"State 2": "the yellow block is clear, the orange block is clear, the blue block is clear, the hand is empty, the blue block is on top of the red block, the red block is on the table, the yellow block is on the table and the orange block is on the table"
+"Previous invalid actions": {"Action 3": "Put down the orange block", "Action 3": "Pick up the red block"}
+
+### Example Output 4:
+"Action 3": "Pick up the yellow block"

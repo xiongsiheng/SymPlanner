@@ -1,0 +1,106 @@
+I am playing with a set of blocks where I need to arrange the blocks into stacks. Here are the actions I can do
+
+Pick up a block
+Unstack a block from on top of another block
+Put down a block
+Stack a block on top of another block 
+
+I have the following restrictions on my actions:
+
+I can only pick up or unstack one block at a time.
+I can only pick up or unstack a block if my hand is empty.
+I can only pick up a block if the block is on the table and the block is clear. A block is clear if the block has no other blocks on top of it and if the block is not picked up.
+I can only unstack a block from on top of another block if the block I am unstacking was really on top of the other block.
+I can only unstack a block from on top of another block if the block I am unstacking is clear.
+Once I pick up or unstack a block, I am holding the block.
+I can only put down a block that I am holding.
+I can only stack a block on top of another block if I am holding the block being stacked.
+I can only stack a block on top of another block if the block onto which I am stacking the block is clear.
+Once I put down or stack a block, my hand becomes empty.
+
+
+Use the following FORMAT to solve the task.
+
+
+### Example Input 1:
+"Goal": "The blue block is on the orange block"
+"Initial state": "The orange block is clear, the red block is clear, the hand is empty, the orange block is on the blue block, the blue block is on the table, the red block is on the table"
+
+### Example Output 1:
+"Action 1": "Unstack the orange block from the blue block"
+"State 1": "The blue block is clear, the red block is clear, the hand is holding the orange block, the blue block is on the table, the red block is on the table"
+"Action 2": "Put down the orange block on the table"  
+"State 2": "The orange block is clear, the blue block is clear, the red block is clear, the hand is empty, the orange block is on the table, the blue block is on the table, the red block is on the table"
+"Action 3": "Pick up the blue block"  
+"State 3": "The orange block is clear, the red block is clear, the hand is holding the blue block, the orange block is on the table, the red block is on the table"
+"Action 4": "Stack the blue block onto the orange block"  
+"State 4": "The blue block is on the orange block, the red block is clear, the hand is empty, the orange block is on the table, the red block is on the table, the blue block is clear"
+"Goal Achieved": "The blue block is on the orange block"
+
+
+### Example Input 2:
+"Goal": "The blue block is on top of the red block and the yellow block is on top of the orange block"
+"Initial state": "The orange block is clear, the yellow block is clear, the hand is empty, the blue block is on top of the red block, the orange block is on top of the blue block, the red block is on the table and the yellow block is on the table"
+
+### Example Output 2:
+"Action 1": "Pick up the yellow block"
+"State 1": "The orange block is clear, the hand is holding the yellow block, the blue block is on top of the red block, the orange block is on top of the blue block, the red block is on the table"
+"Action 2": "Stack the yellow block on top of the orange block"
+"State 2": "The yellow block is on top of the orange block, the hand is empty, the blue block is on top of the red block, the orange block is on top of the blue block, the red block is on the table"
+"Goal Achieved": "The blue block is on top of the red block and the yellow block is on top of the orange block"
+
+
+### Example Input 3:
+"Goal": "the red block is on top of the blue block and the blue block is on top of the orange block"
+"Initial state": "the blue block is clear, the hand is empty, the red block is on top of the yellow block, the blue block is on top of the red block, the yellow block is on top of the orange block and the orange block is on the table"
+
+### Example Output 3:
+"Action 1": "Unstack the blue block from the red block"
+"State 1": "the blue block is clear, the hand is holding the blue block, the red block is clear, the red block is on top of the yellow block, the yellow block is on top of the orange block, and the orange block is on the table"
+"Action 2": "Put down the blue block on the table"
+"State 2": "the blue block is clear, the hand is empty, the blue block is on the table, the red block is clear, the red block is on top of the yellow block, the yellow block is on top of the orange block, and the orange block is on the table"
+"Action 3": "Unstack the red block from the yellow block"
+"State 3": "the red block is clear, the hand is holding the red block, the blue block is clear, the blue block is on the table, the yellow block is clear, the yellow block is on top of the orange block, and the orange block is on the table"
+"Action 4": "Put down the red block on the table"
+"State 4": "the hand is empty, the red block is clear, the red block is on the table, the blue block is clear, the blue block is on the table, the yellow block is clear, the yellow block is on top of the orange block, and the orange block is on the table"
+"Action 5": "Unstack the yellow block from the orange block"
+"State 5": "the yellow block is clear, the hand is holding the yellow block, the red block is clear, the red block is on the table, the blue block is clear, the blue block is on the table, the orange block is clear and on the table"
+"Action 6": "Put down the yellow block on the table"
+"State 6": "the hand is empty, the yellow block is clear, the yellow block is on the table, the red block is clear, the red block is on the table, the blue block is clear, the blue block is on the table, and the orange block is clear and on the table"
+"Action 7": "Pick up the blue block"
+"State 7": "the hand is holding the blue block, the blue block is clear, the red block is clear, the red block is on the table, the yellow block is clear, the yellow block is on the table, and the orange block is clear and on the table"
+"Action 8": "Stack the blue block on top of the orange block"
+"State 8": "the hand is empty, the blue block is clear, the blue block is on top of the orange block, the red block is clear, the red block is on the table, the yellow block is clear, the yellow block is on the table, and the orange block is on the table"
+"Action 9": "Pick up the red block"
+"State 9": "the hand is holding the red block, the red block is clear, the blue block is clear, the blue block is on top of the orange block, the yellow block is clear, the yellow block is on the table, and the orange block is on the table"
+"Action 10": "Stack the red block on top of the blue block"
+"State 10": "the hand is empty, the red block is on top of the blue block, the blue block is on top of the orange block, the yellow block is clear, the yellow block is on the table, and the orange block is on the table"
+"Goal Achieved": "the red block is on top of the blue block and the blue block is on top of the orange block"
+
+
+### Example Input 4:
+"Goal": "the yellow block is on top of the red block, the red block is on top of the blue block and the blue block is on top of the orange block"
+"Initial state": "the red block is clear, the yellow block is clear, the hand is empty, the red block is on top of the orange block, the yellow block is on top of the blue block, the blue block is on the table and the orange block is on the table"
+
+### Example Output 4:
+"Action 1": "Unstack the yellow block from the blue block"
+"State 1": "the red block is clear, the hand is holding the yellow block, the red block is on top of the orange block, the blue block is clear, the blue block is on the table and the orange block is on the table"
+"Action 2": "Put down the yellow block on the table"
+"State 2": "the yellow block is clear, the hand is empty, the yellow block is on the table, the red block is clear, the red block is on top of the orange block, the blue block is clear, the blue block is on the table and the orange block is on the table"
+"Action 3": "Unstack the red block from the orange block"
+"State 3": "the hand is holding the red block, the yellow block is clear, the yellow block is on the table, the blue block is clear, the blue block is on the table, the orange block is clear and the orange block is on the table"
+"Action 4": "Put down the red block on the table"
+"State 4": "the hand is empty, the red block is clear, the red block is on the table, the yellow block is clear, the yellow block is on the table, the blue block is clear, the blue block is on the table and the orange block is clear and on the table"
+"Action 5": "Pick up the blue block"
+"State 5": "the hand is holding the blue block, the red block is clear, the red block is on the table, the yellow block is clear, the yellow block is on the table and the orange block is clear and on the table"
+"Action 6": "Stack the blue block on top of the orange block"
+"State 6": "the blue block is clear, the hand is empty, the blue block is on top of the orange block, the red block is clear, the red block is on the table, the yellow block is clear, the yellow block is on the table and the orange block is on the table"
+"Action 7": "Pick up the red block"
+"State 7": "the hand is holding the red block, the blue block is clear, the blue block is on top of the orange block, the yellow block is clear, the yellow block is on the table and the orange block is on the table"
+"Action 8": "Stack the red block on top of the blue block"
+"State 8": "the red block is clear, the hand is empty, the red block is on top of the blue block, the blue block is on top of the orange block, the yellow block is clear, the yellow block is on the table and the orange block is on the table"
+"Action 9": "Pick up the yellow block"
+"State 9": "the hand is holding the yellow block, the red block is clear, the red block is on top of the blue block, the blue block is on top of the orange block and the orange block is on the table"
+"Action 10": "Stack the yellow block on top of the red block"
+"State 10": "the yellow block is clear, the hand is empty, the yellow block is on top of the red block, the red block is on top of the blue block, the blue block is on top of the orange block and the orange block is on the table"
+"Goal Achieved": "the yellow block is on top of the red block, the red block is on top of the blue block and the blue block is on top of the orange block"

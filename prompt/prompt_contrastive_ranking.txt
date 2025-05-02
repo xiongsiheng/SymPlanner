@@ -1,0 +1,88 @@
+You will be given a goal, an initial block configuration, one or more candidate actions, and their resulting future states. Your task is to evaluate the options by considering both their immediate effects and their utility toward achieving the stated goal.
+Follow this exact format in your response:
+1. "Comparison": Provide a detailed analysis of each option. Evaluate how well each action adheres to the rules, affects the current state, and contributes to achieving the goal. If applicable, consider the long-term impact of the action in reaching the final configuration. 
+2. "Conclusion": Choose only one option that is most effective in progressing toward the goal. Your answer must be in the form: "Option 1" or "Option 2" or "Option 3" — no additional explanation should be included in this section.
+
+
+### Example Input 1:
+"Goal": "The blue block is on the orange block",
+"Initial state": "The orange block is clear, the red block is clear, the hand is empty, the orange block is on the blue block, the blue block is on the table, the red block is on the table",
+"Search steps": {
+    "Option 1": {"Action 1": "Unstack the orange block from the blue block"},
+    "Option 2": {"Action 1": "Pickup the red block"}
+},
+"Futures": {
+    "Future 1": {"State 1": "The blue block is clear, the red block is clear, the hand is holding the orange block, the blue block is on the table, the red block is on the table"},
+    "Future 2": {"State 1": "The orange block is clear, the hand is holding the red block, the orange block is on the blue block, the blue block is on the table"}
+}
+
+### Example Output 1:
+"Comparison": "Option 1 adheres to the rules. This is a productive move toward achieving the goal "The blue block is on the orange block" because now the orange block can be placed on the table, and then the blue block can be stacked on it. Option 2 is also valid. However, it does not progress toward achieving the goal, as it neither changes the relationship between the blue and orange blocks nor facilitates doing so in subsequent steps.",
+"Conclusion": "Option 1"
+
+
+### Example Input 2:
+"Goal": "The blue block is on top of the red block and the yellow block is on top of the orange block",
+"Initial state": "The orange block is clear, the yellow block is clear, the hand is empty, the blue block is on top of the red block, the orange block is on top of the blue block, the red block is on the table and the yellow block is on the table",
+"Action 1": "Pick up the yellow block",
+"State 1": "The orange block is clear, the hand is holding the yellow block, the blue block is on top of the red block, the orange block is on top of the blue block, the red block is on the table",
+"Search steps": {
+    "Option 1": {"Action 2": "Put down the yellow block on the table"},
+    "Option 2": {"Action 2": "Stack the yellow block on top of the orange block"}
+},
+"Futures": {
+    "Future 1": {"State 2": "The orange block is clear, the hand is empty, the blue block is on top of the red block, the orange block is on top of the blue block, the red block is on the table, the yellow block is on the table"},
+    "Future 2": {"State 2": "The yellow block is on top of the orange block, the hand is empty, the blue block is on top of the red block, the orange block is on top of the blue block, the red block is on the table"}
+}
+
+### Example Output 2:
+"Comparison": "Option 1 places the yellow block back on the table, which does not contribute to the goal of stacking it on the orange block. It keeps the yellow block isolated and results in a non-progressive state. Option 2 stacks the yellow block directly on top of the orange block, achieving the goal, as one half of the desired configuration (yellow on orange) is satisfied. Additionally, Option 2 does not interfere with the already correct configuration of blue on red. Therefore, Option 2 is the only one that moves toward achieving the full goal state.",
+"Conclusion": "Option 2"
+
+
+### Example Input 3:
+"Goal": "the red block is on top of the blue block and the blue block is on top of the orange block",
+"Initial state": "the blue block is clear, the hand is empty, the red block is on top of the yellow block, the blue block is on top of the red block, the yellow block is on top of the orange block and the orange block is on the table",
+"Action 1": "unstack the blue block from on top of the red block",
+"State 1": "the red block is clear, the hand is holding the blue block, the red block is on top of the yellow block, the yellow block is on top of the orange block, and the orange block is on the table",
+"Action 2": "put down the blue block",
+"State 2": "the red block is clear, the blue block is clear, the hand is empty, the red block is on top of the yellow block, the yellow block is on top of the orange block, the blue block is on the table and the orange block is on the table",
+ "Search steps": {
+    "Option 1": {"Action 3": "unstack the red block from on top of the yellow block"},
+    "Option 2": {"Action 3": "pick up the blue block"}
+},
+"Futures": {
+    "Future 1": {"State 3": the blue block is clear, the yellow block is clear, the hand is holding the red block, the yellow block is on top of the orange block, the blue block is on the table and the orange block is on the table"},
+    "Future 2": {"State 3": "the red block is clear, the hand is holding the blue block, the red block is on top of the yellow block, the yellow block is on top of the orange block and the orange block is on the table"}
+}
+
+### Example Output 3:
+"Comparison": "Option 1 unstacking the red block from on top of the yellow block is a productive step toward the goal. It frees the yellow block and allows the red block to be repositioned, which is necessary because ultimately the red block needs to be on top of the blue block, and the blue block is currently on the table. This action sets up the possibility of stacking the blocks in the correct order. Option 2, picking up the blue block, simply returns to a previous state where the blue block is being held, but does not address the need to clear the yellow block or move the red block. Therefore, Option 1 is more effective in progressing toward the goal configuration.",
+"Conclusion": "Option 1"
+
+
+### Example Input 4:
+"Goal": "the yellow block is on top of the red block, the red block is on top of the blue block and the blue block is on top of the orange block",
+"Initial state": "the red block is clear, the yellow block is clear, the hand is empty, the red block is on top of the orange block, the yellow block is on top of the blue block, the blue block is on the table and the orange block is on the table",
+"Action 1": "unstack the yellow block from on top of the blue block",
+"State 1": "the red block is clear, the blue block is clear, the hand is holding the yellow block, the red block is on top of the orange block and the blue block is on the table",
+"Action 2": "put down the yellow block",
+"State 2": "the red block is clear, the blue block is clear, the yellow block is clear, the hand is empty, the red block is on top of the orange block, the blue block is on the table, the orange block is on the table and the yellow block is on the table",
+"Action 3": "unstack the red block from on top of the orange block",
+"State 3": "the orange block is clear, the blue block is clear, the yellow block is clear, the hand is holding the red block, the blue block is on the table, the orange block is on the table and the yellow block is on the table",
+"Action 4": "put down the red block",
+"State 4": "the orange block is clear, the red block is clear, the blue block is clear, the yellow block is clear, the hand is empty, the orange block is on the table, the red block is on the table, the blue block is on the table and the yellow block is on the table",
+ "Search steps": {
+    "Option 1": {"Action 5": "stack the red block on top of the yellow block"},
+    "Option 2": {"Action 5": "stack the orange block on top of the blue block"},
+    "Option 3": {"Action 5": "pick up the blue block"},
+},
+"Futures": {
+    "Future 1": {"State 5": "the orange block is clear, the blue block is clear, the yellow block is clear, the hand is empty, the orange block is on the table, the blue block is on the table and the yellow block is on the table"},
+    "Future 2": {"State 5": "the red block is clear, the blue block is clear, the yellow block is clear, the hand is empty, the orange block is on the table, the red block is on the table, the blue block is on the table and the yellow block is on the table"},
+    "Future 3": {"State 5": "the orange block is clear, the red block is clear, the yellow block is clear, the hand is holding the blue block, the orange block is on the table, the red block is on the table and the yellow block is on the table"},
+}
+
+### Example Output 4:
+"Comparison": "Option 1 attempts to stack the red block on top of the yellow block, but according to State 4, the hand is empty and the red block is on the table, so this action is invalid as the hand must be holding the red block to stack it. Option 2 attempts to stack the orange block on top of the blue block, but similarly, the hand is empty and the orange block is on the table, so this action is also invalid. Option 3 picks up the blue block, which is a valid action since the hand is empty and the blue block is clear and on the table. This action is productive because, for the goal state, the blue block needs to be stacked on top of the orange block, and picking it up is a necessary first step toward that configuration. Therefore, Option 3 is the only valid and productive move toward achieving the goal.",
+"Conclusion": "Option 3"

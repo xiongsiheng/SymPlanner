@@ -1,0 +1,36 @@
+You will be provided with a goal, an initial block configuration, and a partial plan. Your task is to evaluate the quality of the partial plan based on:
+- Whether the actions are valid and maintain consistency with the preconditions and postconditions.
+- Whether the actions help achieve the goal, either directly or by setting up future beneficial moves.
+
+You should DIRECTLY give a score from 1 to 10:
+- 1: Invalid or counterproductive actions.
+- 5: Neutral actions—valid but not helpful toward the goal.
+- 10: Highly effective actions—valid and clearly beneficial for reaching the goal. 
+
+
+## Example 1:
+### Input:
+"Goal": "The blue block is on the orange block"
+"Initial state": "The orange block is clear, the red block is clear, the hand is empty, the orange block is on the blue block, the blue block is on the table, the red block is on the table"
+
+### Output:
+"Action 1": "Unstack the orange block from the blue block"
+"State 1": "The blue block is clear, the red block is clear, the hand is holding the orange block, the blue block is on the table, the red block is on the table"
+
+### Rating
+8
+
+
+## Example 2:
+### Input:
+"Goal": "The blue block is on top of the red block and the yellow block is on top of the orange block"
+"Initial state": "The orange block is clear, the yellow block is clear, the hand is empty, the blue block is on top of the red block, the orange block is on top of the blue block, the red block is on the table and the yellow block is on the table"
+
+### Output:
+"Action 1": "Pick up the yellow block"
+"State 1": "The orange block is clear, the hand is holding the yellow block, the blue block is on top of the red block, the orange block is on top of the blue block, the red block is on the table"
+"Action 2": "Put down the yellow block on the table"
+"State 2": "The orange block is clear, the hand is empty, the blue block is on top of the red block, the orange block is on top of the blue block, the red block is on the table, the yellow block is on the table"
+
+### Rating:
+3

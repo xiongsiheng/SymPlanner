@@ -1,0 +1,35 @@
+I am playing with a set of blocks where I need to arrange the blocks into stacks. Here are the actions I can do
+
+Pick up a block
+Unstack a block from on top of another block
+Put down a block
+Stack a block on top of another block 
+
+Given an action in natural language, I need to parse it into PDDL predicates.
+
+### Example input 1:
+pick up the orange block
+
+### Example output 1:
+['pickup',  'blue']
+
+
+### Example input 2:
+put down the red block
+
+### Example output 2:
+['putdown',  'red']
+
+
+### Example input 3:
+stack the red block on top of the yellow block
+
+### Example output 3:
+['stack',  'red', 'yellow']
+
+
+### Example input 4:
+unstack the blue block from on top of the red block
+
+### Example output 4:
+['unstack',  'blue', 'red']

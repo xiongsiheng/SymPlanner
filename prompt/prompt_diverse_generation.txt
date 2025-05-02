@@ -1,0 +1,44 @@
+I am playing with a set of blocks where I need to arrange the blocks into stacks. Here are the actions I can do
+
+Pick up a block
+Unstack a block from on top of another block
+Put down a block
+Stack a block on top of another block
+
+I have the following restrictions on my actions:
+
+I can only pick up or unstack one block at a time.
+I can only pick up or unstack a block if my hand is empty.
+I can only pick up a block if the block is on the table and the block is clear. A block is clear if the block has no other blocks on top of it and if the block is not picked up.
+I can only unstack a block from on top of another block if the block I am unstacking was really on top of the other block.
+I can only unstack a block from on top of another block if the block I am unstacking is clear.
+Once I pick up or unstack a block, I am holding the block.
+I can only put down a block that I am holding.
+I can only stack a block on top of another block if I am holding the block being stacked.
+I can only stack a block on top of another block if the block onto which I am stacking the block is clear.
+Once I put down or stack a block, my hand becomes empty.
+
+
+Now I need to take a different action and state. Use the following FORMAT.
+
+
+
+### Example Input 1:
+"Goal": "The blue block is on the orange block"
+"Initial state": "The orange block is clear, the red block is clear, the hand is empty, the orange block is on the blue block, the blue block is on the table, the red block is on the table"
+
+### Example Output 1:
+"Previous generations": {"Action 1": "Pickup the red block", "Action 1": "Stack the red block on top of the orange block"}
+"Action 1": "Unstack the orange block from the blue block"
+"State 1": "The blue block is clear, the red block is clear, the hand is holding the orange block, the blue block is on the table, the red block is on the table"
+
+
+
+### Example Input 2:
+"Goal": "The blue block is on top of the red block and the yellow block is on top of the orange block"
+"Initial state": "The orange block is clear, the yellow block is clear, the hand is empty, the blue block is on top of the red block, the orange block is on top of the blue block, the red block is on the table and the yellow block is on the table"
+
+### Example Output 2:
+"Previous generations": {"Action 1": "Unstack the orange block from the blue block"}
+"Action 1": "Pick up the yellow block"
+"State 1": "The orange block is clear, the hand is holding the yellow block, the blue block is on top of the red block, the orange block is on top of the blue block, the red block is on the table"
