@@ -2,8 +2,10 @@
 
 This repo contains the code for LM-based planning framework with symbolic environment.
 
+
+<br>
 <p align="center">
-  <img src='misc/Framework.png' width=600>
+  <img src='misc/Framework.png' width=550>
 </p>
 
 ## Quick Start
