@@ -1,13 +1,13 @@
 # Deliberate Planning in Language Models with Symbolic Representation
 
-This repo contains the code for the paper [SymPlanner: Deliberate Planning in Language Models with Symbolic Representation](https://arxiv.org/pdf/2505.01479).
+This repo contains the code for the paper [Deliberate Planning in Language Models with Symbolic Representation](https://arxiv.org/pdf/2505.01479).
 
 SymPlanner a follow-up work of [SWAP](https://github.com/xiongsiheng/SWAP). We integrate symbolic world model for better state prediction. We use iterative correction to increase the diversity of action generation for prompting-based methods.
 
 
 <br>
 <p align="center">
-  <img src='misc/Framework.png' width=550>
+  <img src='misc/Framework.png' width=950>
 </p>
 
 ## Quick Start
