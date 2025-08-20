@@ -10,7 +10,7 @@ This repo contains the code for the paper [Deliberate Planning in Language Model
 
 ## Introduction
 
-SymPlanner a follow-up work of [SWAP](https://github.com/xiongsiheng/SWAP). We integrate symbolic world model for better state prediction. We use iterative correction to increase the diversity of action generation for prompting-based methods.
+SymPlanner a follow-up work of [SWAP](https://github.com/xiongsiheng/SWAP). We integrate a symbolic world model to enable more accurate state prediction. To enhance prompting-based methods, we introduce iterative correction to increase the diversity of action generation, and contrastive ranking to improve the discrimination of intermediate states.
 
 
 <br>
