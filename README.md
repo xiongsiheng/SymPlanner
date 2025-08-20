@@ -2,6 +2,14 @@
 
 This repo contains the code for the paper [Deliberate Planning in Language Models with Symbolic Representation](https://arxiv.org/pdf/2505.01479).
 
+| Model        | **Zero-shot CoT** | **Few-shot CoT (4-shot)** | **ToT** | **RAP** | **SymPlanner** |
+| :----------- | :----------------: | :-----------------------: | :-----: | :-----: | :-------------: |
+| **GPT-4o-mini** | 1.7 | 6.7 | 6.7 | 12.5 | **21.6** |
+| **GPT-4o**      | 17.5 | 17.5 | 9.2 | 17.5 | **50.0** |
+| **GPT-4.1**     | 0.8 | 25.0 | 10.8 | 24.2 | **54.2** |
+
+## Introduction
+
 SymPlanner a follow-up work of [SWAP](https://github.com/xiongsiheng/SWAP). We integrate symbolic world model for better state prediction. We use iterative correction to increase the diversity of action generation for prompting-based methods.
 
 
