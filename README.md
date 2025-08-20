@@ -22,7 +22,7 @@ SymPlanner a follow-up work of [SWAP](https://github.com/xiongsiheng/SWAP). We i
 
 Download [PlanBench](https://github.com/karthikv792/LLMs-Planning)
 
-Preparation:
+**Preparation:**
 ```sh
 git clone https://github.com/xiongsiheng/SymPlanner.git
 
@@ -32,13 +32,44 @@ pip install -r Requirements.txt
 ```
 
 
-Inference:
+**Inference:**
 ```sh
 cd src
 
 python main.py  --data ../dataset/blocksworld_sampled_split_v1 --model gpt-4.1 --output_dir ../results/test_blocksworld_gpt_4.1_sym --max_steps 32 --num_rollouts 32  --num_generations 3 --group_size 3 --beam_width 3 --cmp_per_opt 1 --enable_symbolic --iterative_correction --contrastive_ranking --visualize --batch_process
 
 ```
+
+**Arguments:**
+
+`--data` (*str*): Path to the dataset for evaluation.
+
+`--model` (*str, default=`gpt-4.1`*): Language model used for inference (e.g., `gpt-4o`, `gpt-4.1`, etc.).
+
+`--output_dir` (*str*): Directory to save inference results.
+
+`--visualize` (*flag*): If set, saves visualizations of the language model outputs.
+
+`--batch_process` (*flag*): If set, enables batch processing for faster inference.
+
+`--max_steps` (*int, default=20*): Maximum number of reasoning steps per problem.
+
+`--num_rollouts` (*int, default=8*): Number of rollouts (trajectories) generated for each problem.
+
+`--num_generations` (*int, default=5*): Number of generations per step for candidate actions.
+
+`--cmp_per_opt` (*int, default=1*): Number of comparisons performed per option when ranking.
+
+`--group_size` (*int, default=3*): Group size used for single-time comparison (recommended: 2 or 3).
+
+`--beam_width` (*int, default=3*): Beam width for search during planning.
+
+`--enable_symbolic` (*flag*): Enables symbolic reasoning with the world model for more accurate state prediction.
+
+`--iterative_correction` (*flag*): Enables iterative correction to diversify action generation.
+
+`--contrastive_ranking` (*flag*): Enables contrastive ranking to better discriminate between intermediate states.
+
 
 ### API:
 By default, the system uses the OpenAI API. Please add your own openAI API token as `openai_API_default` at the beginning of `utils.py`. No local models are used unless explicitly configured (No GPU is needed).
