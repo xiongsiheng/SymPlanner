@@ -1,6 +1,6 @@
 # Deliberate Planning in Language Models with Symbolic Representation
 
-This repo contains the code for the paper [Deliberate Planning in Language Models with Symbolic Representation](https://arxiv.org/pdf/2505.01479).
+This repo contains the code for the paper [ACS 25] [Deliberate Planning in Language Models with Symbolic Representation](https://arxiv.org/pdf/2505.01479).
 
 | Model        | **Zero-shot CoT** | **Few-shot CoT (4-shot)** | **ToT** | **RAP** | **SymPlanner** |
 | :----------- | :----------------: | :-----------------------: | :-----: | :-----: | :-------------: |
