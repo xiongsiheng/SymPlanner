@@ -15,7 +15,7 @@ SymPlanner a follow-up work of [SWAP](https://github.com/xiongsiheng/SWAP). We i
 
 <br>
 <p align="center">
-  <img src='misc/Framework.png' width=950>
+  <img src='misc/Framework.png' width=750>
 </p>
 
 ## Quick Start
